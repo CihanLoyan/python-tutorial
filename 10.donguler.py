@@ -1,9 +1,7 @@
-from operator import le
 
 toplam = 0
 while toplam <= 5:
     print(f"toplam: {toplam}")
-    
     toplam += 1
 else:
     print("donguden çıkıldı")
@@ -18,7 +16,7 @@ print("*************************************************************************
 for harf in 'Bursa':
     print(f"Geçerli harf: {harf}")
 
-print()
+print("**********************************************************************************")
 
 meyveler = ["muz", "çilek", "ananas", "kiraz", "erik", "şeftali", "armut", "ayva"]
 for meyve in meyveler:
@@ -48,3 +46,53 @@ print("*************************************************************************
 for t in range(len(meyveler)):
     # print(f"{t}. Meyve:", meyveler[t])
     print(str((t+1)) + ".", "Meyve:", meyveler[t])
+
+print("***********************************************************************************")
+
+liste = [[1, 2], [3, 4]]
+for x in liste:
+    print(x)
+
+
+print("***********************************************************************************")
+
+
+liste1 = [[1, 2],[3, 4]]
+for k, t in liste1:
+    print(f'Liste1:  k:{k} t:{t}')
+
+
+# liste2 = [[1, 2], [3, 4], [5, 6]]
+# for x, y, z in liste2:
+#     print(x, y, z)    # ÇALIŞIR MI?
+
+
+liste3 = [[1, 2, 3], [4, 5, 6]]
+for x, y, z in liste3:
+     print(f'Liste3:  x:{x} y:{y} z:{z}')
+
+
+print("***********************************************************************************")
+
+
+bilgi = {
+    'ad': 'cihan',
+    'yas': 24
+}
+print('Bilgi:', bilgi.items())
+
+print("***********************************************************************************")
+
+for b in bilgi.items():
+    print(b)
+
+print("***********************************************************************************")
+
+print('Keys:', bilgi.keys())
+print('Values:', bilgi.values())
+
+print("***********************************************************************************")
+
+for k, v in bilgi.items():
+    print(f'Key: {k} \t Value: {v}')
+
