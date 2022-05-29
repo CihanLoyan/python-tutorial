@@ -5,7 +5,34 @@ while toplam <= 5:
     toplam += 1
 else:
     print("donguden çıkıldı")
-    
+
+
+print("***********************************************************************************")
+
+
+sayi = int(input('Faktöriyeli hesaplanacak sayıyı giriniz: '))
+fakt = 1
+while sayi > 0:
+    fakt = fakt * sayi
+    sayi -= 1 
+print('Sonuç: ', fakt)
+
+
+print("***********************************************************************************")
+
+devamMi = 'e'
+while devamMi == 'e':
+    sayi = int(input('Sayiyi giriniz: '))
+    asalMi = True
+    if sayi >= 2:
+        for i in range(2, sayi):
+            if sayi % i == 0:
+                asalMi = False
+                break 
+        print('asal değildir') if asalMi == False else print('asaldır')
+        devamMi = input('Devam etmek istiyor musunuz?(e/h)')
+
+
 print("***********************************************************************************")
 
 for harf in 'Bursa':
