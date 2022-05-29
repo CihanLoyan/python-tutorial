@@ -91,3 +91,33 @@ for h in 'Python':
         print("t harfine denk gelindi")
         continue
     print("Geçerli harf", h)
+
+#######################################################
+
+harfler = ['a', 'b', 'c']
+while True:
+    arananHarf = input('Bir harf giriniz: ')
+    try:
+        int(arananHarf)
+        print('Sayı girdiniz!!!')
+    except:
+        if len(arananHarf) != 1:
+            print('Birden fazla harf girdiniz!!!')
+            continue    # Eğer yukarıdaki şart sağlanmazsa içinde bulunulan döngünün bir sonraki adımından devam et.
+        elif arananHarf in harfler:
+            print(f'Aranan harf({arananHarf}) bulundu: {harfler}')
+            break
+        else:
+            print('Aranan harf listede bulunamadı! Listeye eklensin mi?')
+            while True:
+                cevap = input('Cevabınızı buraya yazabilirsiniz:(evet/hayır)')
+                if cevap == 'evet' or cevap == 'EVET': 
+                    harfler.append(arananHarf)
+                    print(f'Listeye ekleme işlemi başarılı. Güncel Liste: {harfler}')
+                    break
+                elif cevap == 'hayır' or cevap == 'HAYIR': 
+                    print(f'Güncel Liste: {harfler}')
+                    break
+                else: continue
+            break
+    continue
