@@ -1,6 +1,3 @@
-from ast import arg
-from re import A
-
 
 def yazdir():
     print(3)
@@ -121,7 +118,7 @@ def sirala(*args):
 sirala('cihan', 'loyan', 'bursa', '25')
 
 
-def kimlik(**kwargs):  # Dictionary tipinde parametre girmek gerekiyor. 
+def kimlik(**kwargs):  #keyword-arguments.  Dictionary tipinde parametre girmek gerekiyor. 
     if 'departman' in kwargs:  # Girilen dict'nin içinde key değeri olarak 'departman'ı arıyor.
         print(kwargs['departman'])  # Eğer varsa departman key'inin value'sunu döndürüyor.
     else:
