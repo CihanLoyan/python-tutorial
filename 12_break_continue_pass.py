@@ -98,7 +98,7 @@ harfler = ['a', 'b', 'c']
 while True:
     arananHarf = input('Bir harf giriniz: ')
     try:
-        int(arananHarf)
+        int(arananHarf) # isdigit kullanılabilirdi ve try-except'e gerek kalmazdı fakat bu örnekte bir çok özelliği bir arada kullanmak istedim.
         print('Sayı girdiniz!!!')
     except:
         if len(arananHarf) != 1:
