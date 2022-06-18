@@ -1,18 +1,18 @@
-# from time import sleep
+from time import sleep
 
 def tam_sayiya_yuvarla():
     girdi = input('Ondalık sayı giriniz: ')
     
     status = False
 
-    try:
+    try:  # içindeki işlemleri dene, bir problem yoksa finally'ye zıpla.
         girdi = float(girdi)
         print(f'Yuvarlama işleminin sonucu: {round(girdi)}')
         status = True
-    except:
+    except:  # try içinde rastladığın ilk hatada hemen buraya atla, sonrasında finally'ye uğra.
         print(f'Girilen {girdi} sayısı ondalık değil!')
         status = False
-    finally:
+    finally:  # try'da çalışsa except'te çalışsa her zaman çalışacak kısım.
         print(f'Tam sayiya çevirme işleminin sonucu: {status}')
 
 tam_sayiya_yuvarla()
