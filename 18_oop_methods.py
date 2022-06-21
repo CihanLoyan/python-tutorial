@@ -1,8 +1,8 @@
 
 class Siha():
 
-    Uretim = 0  # Şuana kadar üretilen siha miktarı. Stok miktarıyla alakası yok. 
-    Satis = 0   # Şuana kadar satılan siha miktarı. Stok miktarıyla alakası yok.
+    Uretim = 0  # Şu ana kadar üretilen siha miktarı. Stok miktarıyla alakası yok. 
+    Satis = 0   # Şu ana kadar satılan siha miktarı. Stok miktarıyla alakası yok.
     Stok = 0    # Her üretim ve satış metotları çalıştığında adete göre güncellenecek kısım.
 
     def __init__(self, marka, max_irtifa, havada_kalis, max_hiz, yakit):
@@ -38,6 +38,7 @@ print('Stok: ', tb2.Stok)
 
 tb2.satis(2)
 print('Stok: ', tb2.Stok)
+
 tb2.satis()
 
 tb2.uretim(5)
